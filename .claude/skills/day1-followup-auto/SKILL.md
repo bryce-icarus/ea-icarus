@@ -35,13 +35,15 @@ Also check the lead's notes/activity for an existing "Day-1 follow-up sequence g
 
 ## Step 4: Pull Close context
 
-Same as `lead-follow-up` Step 2: company, vertical, opportunity status, existing notes, any objections logged, and whether a proposal has already gone out (check recent Gmail sent mail for a Stage 1 proposal to this lead's email, same signal the Nic Nac run used, since the recap should reference an already-sent proposal instead of duplicating it).
+Same as `lead-follow-up` Step 2: company, vertical, opportunity status, existing notes, any objections logged, and whether a proposal has already gone out.
+
+**Stage 1 proposal timing — default assumption is NOT sent.** Per `context/work.md`, the paid-media plan takes a while to build, it's not a same-day deliverable by default. Check Gmail sent mail for an actual "Your Icarus paid-media plan" email to this lead's address. Only treat it as sent if that email is actually found (the Nic Nac run confirmed one this way, that's the exception, not the default). If not found, the recap should mention the plan is coming, not imply it's already out or invent a delivery date.
 
 ## Step 5: Draft the Day-1 triad
 
 Use `references/sops/follow-up-masterclass.md` Section 2 for structure and Section 1/11 for voice (conviction-based, direct, contextualized to the lead's actual call content from the transcript, never generic).
 
-1. **Recap email** — Gmail draft (`mcp__claude_ai_Gmail__create_draft`), addressed to the lead, NOT sent. Warm open referencing something real from the transcript, quick recap of what was discussed, `[program overview video, not yet built]` placeholder, reference to an already-sent proposal if Step 4 found one, conviction close, ask for a follow-up time if none is already booked.
+1. **Recap email** — Gmail draft (`mcp__claude_ai_Gmail__create_draft`), addressed to the lead, NOT sent. Warm open referencing something real from the transcript, quick recap of what was discussed, `[program overview video, not yet built]` placeholder, mention of the Stage 1 plan per Step 4 (already-sent reference only if confirmed, otherwise phrased as coming), conviction close, ask for a follow-up time if none is already booked.
 2. **Personal text** — plain copy, references something specific.
 3. **Voice note script** — plain copy, pure conviction, references something specific from the call.
 

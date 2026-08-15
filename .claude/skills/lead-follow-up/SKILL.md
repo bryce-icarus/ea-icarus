@@ -42,6 +42,7 @@ For each non-close call, produce all three pieces using Section 2 of the SOP:
 - Subject: "Recap from our call" or "Recap: what [outcome] looks like for you"
 - Warm open → quick recap of what was discussed → program overview video → confirm the next call date/time → conviction close.
 - **No program overview video exists yet** (confirmed with Bryce Aug 2026). Leave a `[program overview video, not yet built]` placeholder rather than a fake or broken link, and mention it in your summary to Bryce so it doesn't get missed as a to-build item.
+- **Stage 1 proposal timing:** the paid-media plan (`context/work.md`) takes a while to build, it's not sent same-day by default. Check Gmail sent mail for an actual "Your Icarus paid-media plan" email to this lead before assuming it's gone out. If confirmed sent, reference it plainly (don't duplicate its content). If not yet sent, mention it's coming rather than implying it's already there or promising a specific date Bryce hasn't set.
 - Contextualize to the lead's actual vertical/objections from Close, don't send a generic template.
 
 **2. Personal text** — plain copy, not sent by Claude (no SMS integration; SOP requires it come from Bryce's real phone anyway). Short, personal-number intro line per Section 2 Step 2.
