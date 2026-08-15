@@ -1,11 +1,13 @@
 ---
 name: booking-research
-description: Runs on a schedule to catch newly booked "Strategy Session with Icarus" calls on Google Calendar, researches the lead/company via Perplexity, and emails Bryce the brief before the call. Requires Perplexity MCP to be connected — see Prerequisites.
+description: Runs on a schedule to catch newly booked "Strategy Session with Icarus" calls on Google Calendar, researches the lead/company via Perplexity, drafts a personal pre-call text in Bryce's voice, and emails Bryce both before the call. Requires Perplexity MCP to be connected — see Prerequisites.
 ---
 
 # Booking Research
 
-Detects new discovery-call bookings and gets Bryce a research brief on the lead before he's on the call with them. Built 2026-08-14 per Bryce's request.
+Detects new discovery-call bookings and gets Bryce a research brief on the lead, plus a personal pre-call text draft, before he's on the call with them. Built 2026-08-14 per Bryce's request, pre-call text draft added 2026-08-15.
+
+**This fills a real gap, not an existing SOP.** `references/sops/follow-up-masterclass.md` and the rest of the SOP set script the post-call sequence (Day 1 recap/text/voice-note, Days 2-3, Day 4+) and the automated confirmation-page/reminder cadence (`confirmation-page-best-practices.md`, marketing-owned, not something Bryce sends). Nothing covers a personal touch from Bryce himself in the window between booking and the call. This step is an interpretive addition using the same voice rules as the rest of the SOP set (Section 1 and Section 11 of the follow-up masterclass: conviction-based, direct, personal, never "just checking in" or generic), not sourced from the original material.
 
 **Delivery is email, not Slack.** Slack was the original plan but Icarus's workspace is company-owned (per `context/team.md`) and Bryce isn't the admin, so connecting a Slack app connector needs someone else's approval. Gmail is already connected and fully his, so the brief goes to his own inbox instead. Revisit Slack later if workspace admin approval comes through.
 
@@ -42,9 +44,31 @@ Use the Perplexity MCP tool (exact tool name depends on how it's connected — c
 
 Keep it factual, don't speculate beyond what's found. If Perplexity finds nothing useful (thin web presence), say so rather than padding the brief.
 
-## Step 4: Compose the brief
+## Step 4: Compose the research section
 
-Format per `.claude/rules/communication-style.md` (bullets, no em dashes, no emojis, casual internal tone). Keep it scannable, Bryce is reading this on his phone before a call:
+Format per `.claude/rules/communication-style.md` (bullets, no em dashes, no emojis, casual internal tone). Keep it scannable, Bryce is reading this on his phone before a call. This becomes the "Research" block in the Step 6 email, covering: company/product summary, size/stage signal, recent news (if any), compliance/vertical fit note (if relevant), and a one-line suggested angle only if something concrete surfaced.
+
+## Step 5: Draft a personal pre-call text (Bryce's voice, not sent)
+
+Draft a short text Bryce could send from his own personal phone, same spirit as the Day-1 personal text in the follow-up masterclass but adapted for before the call instead of after. Never actually send it, texts are never automated per that SOP, this is a draft for Bryce to copy and send himself.
+
+**Voice rules (per follow-up-masterclass.md Sections 1 and 11):**
+- Direct, personal, conviction-based. No corporate softness.
+- Never generic. Must reference something *specific* from the booking notes, the company, or the research, proof Bryce actually looked at their situation, not a template with the name swapped in.
+- No "just checking in," no "looking forward to connecting," no filler. Say something real in one or two sentences and stop.
+- Casual, like a text a person actually sends. Contractions, short sentences, no "Dear" or sign-off block.
+
+**Shape (adapt every time, don't reuse verbatim):**
+> Hey [Name], this is Bryce with Icarus. Saw you locked in [day/time] — [one specific, real line: what they said they need, what their company does, or something the research turned up]. [One line of genuine excitement/conviction about the call, tied to that specific thing]. Talk soon.
+
+**Worked example (from the ArkonLabs demo run):**
+> Hey Mohamed, this is Bryce with Icarus. Saw you're the ArkonLabs guy for Monday at 11 — read what you sent over about needing someone who's actually handled restricted/regulated brands without tanking the ad account. That's the whole reason we exist, excited to get into specifics with you Monday.
+
+If nothing specific surfaced (thin booking notes, no research findings), say so rather than forcing a generic line, flag it in the email instead of drafting a hollow text.
+
+## Step 6: Email the brief
+
+Send the brief via `mcp__claude_ai_Gmail__send_message` to Bryce's own address (brycestrange3@gmail.com), subject line like "Booking research: [Lead] — [Company]", so it lands in his inbox before the call. Include the Step 5 text draft in its own clearly-labeled section so it doesn't get mistaken for something already sent:
 
 ```
 New booking: [Lead name] — [Company]
@@ -59,12 +83,12 @@ Research:
 - [compliance/vertical fit note, if relevant]
 
 [One-line suggested angle for the call, only if something concrete surfaced]
+
+---
+Pre-call text draft (send from your own phone, not sent automatically):
+[the drafted text from Step 5]
 ```
 
-## Step 5: Email the brief
-
-Send the brief via `mcp__claude_ai_Gmail__send_message` to Bryce's own address (brycestrange3@gmail.com), subject line like "Booking research: [Lead] — [Company]", so it lands in his inbox before the call.
-
-## Step 6: Update the log
+## Step 7: Update the log
 
 Append each processed booking to `context/booking-research-log.md` (event identifier, lead name, company, call time, date researched) so it's never re-sent on the next scheduled run.
