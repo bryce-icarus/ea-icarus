@@ -1,22 +1,21 @@
 ---
 name: booking-research
-description: Runs on a schedule to catch newly booked "Strategy Session with Icarus" calls on Google Calendar, researches the lead/company via Perplexity, and sends Bryce a Slack DM with the brief before the call. Requires Perplexity MCP and Slack MCP to be connected — see Prerequisites.
+description: Runs on a schedule to catch newly booked "Strategy Session with Icarus" calls on Google Calendar, researches the lead/company via Perplexity, and emails Bryce the brief before the call. Requires Perplexity MCP to be connected — see Prerequisites.
 ---
 
 # Booking Research
 
 Detects new discovery-call bookings and gets Bryce a research brief on the lead before he's on the call with them. Built 2026-08-14 per Bryce's request.
 
+**Delivery is email, not Slack.** Slack was the original plan but Icarus's workspace is company-owned (per `context/team.md`) and Bryce isn't the admin, so connecting a Slack app connector needs someone else's approval. Gmail is already connected and fully his, so the brief goes to his own inbox instead. Revisit Slack later if workspace admin approval comes through.
+
 ## Prerequisites (check every run)
 
-This skill needs two MCP servers that were **not connected** when it was built:
+This skill needs **Perplexity MCP**, which was **not connected** when it was built, for the research step.
 
-1. **Perplexity MCP** — for the research step.
-2. **Slack MCP** — for the delivery step (Bryce chose Slack DM over email/SMS).
-
-At the start of each run, check whether the required tools are available (`ToolSearch` with a query like `select:` a known tool name, or check the deferred-tools listing in context). If either is still missing:
+At the start of each run, check whether the Perplexity tool is available (`ToolSearch` with a query like `select:` a known tool name, or check the deferred-tools listing in context). If it's still missing:
 - Do the parts you can (calendar scan, Close lookup) and log the new booking(s) as "detected, pending research" in `context/booking-research-log.md` rather than silently skipping.
-- Note that once the missing server is connected, the skill should be re-run to backfill.
+- Note that once Perplexity is connected, the skill should be re-run to backfill.
 - Don't fail the whole run for a missing dependency, degrade gracefully.
 
 ## Step 1: Find new bookings
@@ -62,9 +61,9 @@ Research:
 [One-line suggested angle for the call, only if something concrete surfaced]
 ```
 
-## Step 5: Send the Slack DM
+## Step 5: Email the brief
 
-Send the brief as a direct message to Bryce via the Slack MCP tool. If Bryce is in multiple Slack workspaces or the tool needs a user ID/channel, use his own DM channel (self-DM or "Slackbot" style) — confirm the right target with Bryce the first time this runs successfully, then it's a known quantity for future runs.
+Send the brief via `mcp__claude_ai_Gmail__send_message` to Bryce's own address (brycestrange3@gmail.com), subject line like "Booking research: [Lead] — [Company]", so it lands in his inbox before the call.
 
 ## Step 6: Update the log
 
