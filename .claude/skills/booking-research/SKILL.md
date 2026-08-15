@@ -64,11 +64,11 @@ Draft a short text Bryce could send from his own personal phone, same spirit as 
 **Worked example (from the ArkonLabs demo run):**
 > Hey Mohamed, this is Bryce with Icarus. Saw you're the ArkonLabs guy for Monday at 11 — read what you sent over about needing someone who's actually handled restricted/regulated brands without tanking the ad account. That's the whole reason we exist, excited to get into specifics with you Monday.
 
-If nothing specific surfaced (thin booking notes, no research findings), say so rather than forcing a generic line, flag it in the email instead of drafting a hollow text.
+If nothing specific surfaced (thin booking notes, no research findings), say so rather than forcing a generic line, and skip Step 6b for that lead rather than drafting a hollow text.
 
-## Step 6: Email the brief
+## Step 6: Deliver — two separate items, not one
 
-Send the brief via `mcp__claude_ai_Gmail__send_message` to Bryce's own address (brycestrange3@gmail.com), subject line like "Booking research: [Lead] — [Company]", so it lands in his inbox before the call. Include the Step 5 text draft in its own clearly-labeled section so it doesn't get mistaken for something already sent:
+**6a. Email the research brief** via `mcp__claude_ai_Gmail__send_message` to Bryce's own address (brycestrange3@gmail.com), subject line like "Booking research: [Lead] — [Company]":
 
 ```
 New booking: [Lead name] — [Company]
@@ -85,9 +85,10 @@ Research:
 [One-line suggested angle for the call, only if something concrete surfaced]
 
 ---
-Pre-call text draft (send from your own phone, not sent automatically):
-[the drafted text from Step 5]
+Pre-call text: drafted separately in your Gmail Drafts (see "Text draft: [Lead] — pre-call").
 ```
+
+**6b. Draft the pre-call text as its own Gmail draft** via `mcp__claude_ai_Gmail__create_draft` — no recipient needed, just staging it as a standalone item. Subject: "Text draft: [Lead] — pre-call". Body: the Step 5 text, plus a one-line footer noting it's a draft to copy into a real text, not sent automatically. Keeping it separate from the research brief means Bryce can find it fast (Drafts folder, on his phone) without hunting through a longer email, and there's no confusion about whether it was already sent (a real Gmail draft never sends itself).
 
 ## Step 7: Update the log
 
