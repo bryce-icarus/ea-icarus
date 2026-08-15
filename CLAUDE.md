@@ -11,6 +11,8 @@ Everything here supports one goal: staying on top of leads, running quality foll
 - @context/team.md: key people and when to loop them in
 - @context/current-priorities.md: what Bryce is focused on right now
 - @context/goals.md: quarterly goals and milestones
+- @context/pending-responses.md: emails awaiting Bryce's reply — check this whenever he asks about today's plan or tasks to handle
+- @context/waiting-on.md: things Bryce is blocked on from other people (e.g. Simon). Persistent — items stay until Bryce says they're done, not cleared by email scans. Check when he asks about today's plan, blockers, or what he's waiting on.
 
 ## Communication Style
 See @.claude/rules/communication-style.md for tone and formatting rules. Follow these on every response.
@@ -20,14 +22,19 @@ See @.claude/rules/communication-style.md for tone and formatting rules. Follow 
 - Calendar: Google Calendar
 - Team chat: Slack
 - Docs/Email: Google Workspace
-- No MCP servers connected yet. If Bryce wants live CRM/calendar access inside Claude Code, that would need to be set up.
+- MCP servers connected: Gmail, Google Calendar, Google Drive, Close.io (Canva, Perplexity, and Slack pending authorization).
 
 ## Skills
-Reusable workflows live in `.claude/skills/`. Each skill gets its own folder: `.claude/skills/skill-name/SKILL.md`. This directory starts empty. Skills get built organically as recurring workflows emerge (see the backlog below).
+Reusable workflows live in `.claude/skills/`. Each skill gets its own folder: `.claude/skills/skill-name/SKILL.md`. Skills get built organically as recurring workflows emerge (see the backlog below).
+
+### Built
+- `daily-plan` — Bryce's plan for the day: today's calendar calls + a fresh scan of emails awaiting his reply. Also keeps `context/pending-responses.md` up to date. Also flags follow-up timing (see below).
+- `lead-follow-up` — runs the Day-1 follow-up sequence (recap email draft, personal text copy, voice note script) after non-close calls, and checks the pipeline for Day 4+, cold reactivation, and end-of-month squeeze timing. Drafts and stages only, nothing sends automatically. Framework: `references/sops/follow-up-masterclass.md`.
+- `pipeline-review` — daily deal-scoring pass (maps to Close's confidence field), weekly stale-deal sweep, and pipeline snapshot/forecast, read-only unless Bryce confirms a change. Framework: `references/sops/pipeline-management-masterclass.md`.
+- `booking-research` — runs on a schedule, catches new "Strategy Session with Icarus" bookings on the calendar, researches the lead/company via Perplexity, sends Bryce a Slack DM with the brief. **Blocked on Perplexity MCP and Slack MCP authorization** (neither connected yet as of 2026-08-14).
 
 ### Skills to Build (backlog)
 - Post-call brief generator
-- Lead follow-up system / cadence
 - Contract handling workflow
 
 ## Decision Log
