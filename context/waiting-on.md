@@ -12,4 +12,5 @@ Things Bryce is blocked on from other people. Persistent list — items stay her
 ## Michael Porke
 
 - [ ] Connect Facebook to Close so leads auto-populate there instead of relying on manual sheet input. _(added 2026-08-15)_
+  - **Not sent yet.** Bryce plans to Slack Michael about this Monday, should surface as a reminder in `daily-plan` that Monday, then move to "waiting on" in the normal sense once he's actually sent it.
   - Feeds directly into the "dial in Close CRM" priority (`context/current-priorities.md`) — Bryce is deliberately holding off on the CRM cleanup work until his own lead-input backlog is caught up, and this would remove the need for manual sheet input going forward.

@@ -52,7 +52,13 @@ Overwrite `context/pending-responses.md` with the fresh results, same section st
 - **Run the `lead-follow-up` skill's Step 5 pipeline check every time daily-plan runs**, not just when Bryce asks, specifically the **Day 2-3 touches** and **Day 3 → Day 4+ handoff** buckets. With his call volume, both are easy to lose under a heavy day, worth the extra Close.io query every morning even though the rest of this step is date-based only. Surface named leads with a day-count for each.
 - Check today's date against the end of the calendar month. If today falls in the **last 7 days of the month**, flag that the end-of-month squeeze window is open (full-pipeline re-offer blast, see SOP Section 7) and ask if he wants it drafted via `lead-follow-up`. Don't assume it hasn't been sent yet, just surface the window and let Bryce confirm.
 
-## Step 6: Present the plan
+## Step 6: Check reminders and outbound asks
+
+Read `context/waiting-on.md`. It's persistent (items stay until Bryce explicitly says they're done, not auto-cleared by a scan), so just surface what's currently there, don't try to resolve or clear anything. Two kinds of line show up in that file, treat them differently:
+- **Blocked on someone else** (the normal case): already asked, waiting on their reply. Mention it lightly, don't repeat it in full every single day, that gets noisy, a short one-line mention is enough.
+- **Not sent yet** (flagged explicitly in the file, e.g. "Not sent yet"): this is Bryce's own outbound action still pending, surface it as a clear reminder, not a background item, since these are easy to let slip. Once Bryce says he's sent it, update the file to drop the "not sent yet" flag and treat it as a normal blocked-on-someone-else item going forward.
+
+## Step 7: Present the plan
 
 Format per `.claude/rules/communication-style.md` (bullets, no em dashes, no emojis, casual internal tone). Structure:
 
@@ -65,4 +71,5 @@ Format per `.claude/rules/communication-style.md` (bullets, no em dashes, no emo
 7. **Ready to move to the Close automation** — named leads at day 4+ from Step 5, ask before enrolling
 8. **Likely no-shows** — named leads with no transcript found from Step 5, ask before logging or enrolling in re-engagement
 9. **End-of-month squeeze** — only mention if the window is open per Step 5
-10. Skip low-priority/FYI items in the main reply unless Bryce asks for the full list — just mention "N low-priority items sitting in pending-responses.md if you want them."
+10. **Reminders / outbound asks** — from Step 6, lead with anything flagged "not sent yet," mention normal blocked-on-someone-else items briefly
+11. Skip low-priority/FYI items in the main reply unless Bryce asks for the full list — just mention "N low-priority items sitting in pending-responses.md if you want them."
