@@ -32,6 +32,7 @@ Run the Step 5 pipeline check by default every time this skill is invoked, even 
 - For each confirmed call, look up the attendee in Close.io (`mcp__claude_ai_Close__lead_search` or `find_contact_custom_fields`/`fetch_lead`) to get: company, vertical, opportunity/lead status, notes from past activity, any objections logged.
 - If a lead isn't in Close yet or the match is low-confidence, flag it to Bryce rather than guessing.
 - **Skip closed-won calls** — those don't get the follow-up sequence, they get onboarding (see `context/work.md` delivery process).
+- **Check for a duplicate run before drafting.** `day1-followup-auto` runs hourly (business hours) and may have already generated this exact call's Day-1 sequence. Look for a "Day-1 follow-up sequence generated" note on the lead (or check `context/day1-followup-log.md`) before drafting, if it's already there, tell Bryce it's done rather than redrafting.
 
 ## Step 3: Draft the Day-1 sequence assets
 
