@@ -24,7 +24,7 @@ For each event, pull: time, title, attendees (who the call is with — cross-ref
 Re-scan Gmail rather than trusting the stored file. Use `mcp__claude_ai_Gmail__search_threads` with a query like:
 
 ```
-in:inbox newer_than:14d -from:notifications@tasks.clickup.com -from:notifications@calendly.com -from:team@mail.clickup.com -from:teamzoom@e.zoom.us -from:teamcalendly@send.calendly.com -from:support@close.com -from:support+notifications@close.com -from:no-reply@accounts.google.com -from:notifications-noreply@linkedin.com -from:messages-noreply@linkedin.com -from:noreply@skool.com -from:membersuccess@alignable.com -from:help@clickup.com -from:mailer-daemon@googlemail.com -from:communications@b2binfo.verizonwireless.com -from:simon@icarusdigitalmarketing.com
+in:inbox newer_than:14d -from:notifications@tasks.clickup.com -from:notifications@calendly.com -from:team@mail.clickup.com -from:teamzoom@e.zoom.us -from:teamcalendly@send.calendly.com -from:support@close.com -from:support+notifications@close.com -from:no-reply@accounts.google.com -from:notifications-noreply@linkedin.com -from:messages-noreply@linkedin.com -from:noreply@skool.com -from:membersuccess@alignable.com -from:help@clickup.com -from:mailer-daemon@googlemail.com -from:communications@b2binfo.verizonwireless.com -from:simon@icarusdigitalmarketing.com -from:team@mail.perplexity.ai -from:noreply@campaign.eventbrite.com -from:notifications@fathom.video
 ```
 
 Note `gemini-notes@google.com` is deliberately **not** excluded here anymore (it used to be), those emails are now the confirmation signal, see below.

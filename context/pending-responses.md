@@ -1,25 +1,26 @@
 # Pending Email Responses
 
-_Snapshot from Gmail scan: 2026-08-14 (deep scrub, 90-day window). Updated same day: Bryce replied to all drafted items except Taryn/Q Solutions, which is blocked on info from Simon. This is a point-in-time list, not live — re-scan the inbox when asked for "today's plan" if it's been more than a day since the last update._
+_Snapshot from Gmail scan: 2026-08-17. Live scan, re-run whenever "today's plan" is asked._
 
 ## Needs a reply — leads / revenue (high priority)
 
-1. **Taryn Dougan (Q Solutions)** — thread "Whatsapp number or Cell?"
-   - Needs your legal business name, mailing address, and signer name/title to draft the ISV referral agreement. Draft reply is ready in Gmail with these fields bracketed — blocked on Simon providing the info. See [[waiting-on]].
+1. **Dom P (Vici Peptides)** — asked "I'm looking for an affiliate marketer at the moment to own and scale my affiliate marketing end to end. Do you guys do this?" (2026-08-14). Unanswered since.
+2. **Ivo Polic (15 km llc)** — post-call thread today, gave his WhatsApp (+385 99 459 4650) and said "2 weeks, free of charge, whatever needed" — worth a quick acknowledgment. Separately: **he's not in Close at all**, worth adding given the call already happened.
 
-## Resolved today
+## Worth a nudge
 
-Bryce replied to all of these (drafts sent 2026-08-14): Vishal/Natalia (Medterra), Steve (Fortem Research), Ivo Polic, Mitch (Dark Matter SEO), VMAX Peptides, info@halopeptideco.com, mitch@icc.me, info@honestpep.com, bstevens@chalktalkdigital.com, Oren Gold, Randall Johnson (hmcholdingcorp), Dom P (Vici Peptides), Phillip Garza, Deepanshu Bedi (Kylo Peptides), David H (Fansly), Ruben Valenzuela (MycoBag).
+- Nothing new beyond what's already tracked in `waiting-on.md` (Simon-side blockers).
 
 ## Low priority / optional
 
-- **Natalie Richards (podcast invite)** — she said she'll "close the loop" on her end since you went quiet; only reply if you actually want the guest spot.
-- **Darya, RemotePayHub** — cold vendor pitch re: Philippines contractor payroll ($350/mo per person). Said she won't write again. No urgency.
-- **Anthony, The Kind Pen** — vape-for-backlink swap pitch, repeated follow-ups. Optional/ignorable.
-- **whitfieldjosh@signalizleadgenius.com** — cold outbound vendor pitch, followed up 3x unanswered. Ignorable.
+- Perplexity marketing emails (2), Eventbrite Sales Navigator ad (2), Fathom privacy policy notice — all ignorable.
 
 ## FYI, not a reply but an action trigger
 
-- **SignWell contract "Icarus Digital Marketing - Meta"** — Alex + Simon completed (signed earlier). If this is a new client, confirm onboarding has kicked off.
-- **SignWell contract "Icarus Digital Marketing - Meta"** — Chris (Daily Addicts) + Simon completed today. You already replied to Chris this morning confirming it and sending the onboarding link — no further action needed unless he doesn't follow through.
-- **Read.ai meeting report — Nick Warren call (Aug 3)** — still unviewed, three reminder nudges since. Covers Metamolecule rebrand, a payment-processor payout failure, and a competing agency's approach. Worth a quick read.
+- **Chris (Daily Addicts)** — submitted the form, said he'd have brand guidelines over "by tomorrow" (as of Aug 15). Worth a light check tomorrow if nothing's landed.
+- **ClickUp daily ops summary** — 150 overdue tasks across delivery/onboarding org-wide. Not yours to fix directly, but worth knowing that's the scale of the backlog.
+- **$2,537.50 ACH payment received** (Slash) — confirmed, no action needed.
+
+## Resolved (from prior scan, still holding)
+
+Bryce replied to everything flagged in the 2026-08-14 scan except Taryn/Q Solutions (blocked on Simon, see `waiting-on.md`).
